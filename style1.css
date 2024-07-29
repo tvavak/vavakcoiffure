@@ -1,0 +1,156 @@
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&family=Fredericka+the+Great&display=swap');
+
+    :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #8E7C55;
+        --light-color: #ecf0f1;
+        --dark-color: #34495e;
+    }
+
+    body {
+        font-family: 'Raleway', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--light-color);
+        color: var(--dark-color);
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: var(--primary-color); /* Utilisation correcte de la variable de couleur */
+        color: var(--light-color); /* Utilisation correcte de la variable de couleur */
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    h1 {
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 3.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        margin: 0;
+    }
+
+    .scissors-logo {
+        width: 50px;
+        height: 50px;
+        margin-left: 15px;
+        animation: snip 2s infinite;
+    }
+
+    @keyframes snip {
+        0% { transform: rotate(0deg); }
+        50% { transform: rotate(-20deg); }
+        100% { transform: rotate(0deg); }
+    }
+
+    nav {
+        background-color: var(--secondary-color);
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    nav ul li a {
+        color: var(--light-color);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        text-align: center;
+        color: var(--primary-color);
+    }
+
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .about-text {
+        flex: 1;
+        min-width: 300px;
+        padding: 1rem;
+    }
+
+    .about-image {
+        flex: 1;
+        min-width: 300px;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .values {
+        margin-top: 3rem;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .value-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .value-icon {
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        background-color: var(--primary-color); /* Utilisation correcte de la variable de couleur */
+        color: var(--light-color); /* Utilisation correcte de la variable de couleur */
+        text-align: center;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .about-content {
+            flex-direction: column;
+        }
+
+        .about-image {
+            margin-top: 2rem;
+        }
+    }
